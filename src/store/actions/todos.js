@@ -21,3 +21,9 @@ export const setVisibilityFilter = filter => {
     filter
   }
 }
+
+export const VisbilityFilters = {
+  show_all: 'SHOW_ALL',
+  show_completed: 'SHOW_COMPLETED',
+  show_active: 'SHOW_ACTIVE'
+}
