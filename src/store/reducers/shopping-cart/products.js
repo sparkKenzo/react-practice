@@ -17,7 +17,7 @@ const byId = (state = {}, action) => {
     case RECEIVE_PRODUCTS:
       return {
         ...state,
-        ...state.products.reduce((obj, product) => {
+        ...action.products.reduce((obj, product) => {
           obj[product.id] = product
           return obj
         }, {})
@@ -48,4 +48,9 @@ export default combineReducers({
   visibleIds
 })
 
-export const 
+export const getProduct = (state, id) => {
+  return state.byId[id]
+}
+export const getVisibleProducts = state => {
+  return state.visibleIds.map(id => getProduct(state, id))
+}

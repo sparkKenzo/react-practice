@@ -6,5 +6,6 @@ import _products from './products.json'
 const TIME_OUT = 1000
 
 export default {
-  getProducts: (cb, timeout) => setTimeout(() => cb(_products), timeout || TIME_OUT)
+  getProducts: (cb, timeout) => setTimeout(() => cb(_products), timeout || TIME_OUT),
+  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIME_OUT)
 }
